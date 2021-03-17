@@ -103,11 +103,11 @@ spec:
             - name: {{ $mount.name }}
               mountPath: {{ $mount.mountPath }}
             {{- end }}
+            {{- end }}
             {{- if .Values.secrets }}
             {{- range $_, $mount := .Values.secrets }}
             - name: {{ .name }}
               mountPath: {{ .mountPath }}
-            {{- end }}
             {{- end }}
             {{- end }}
 {{- if .Values.sidecars }}
